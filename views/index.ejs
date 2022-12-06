@@ -8,9 +8,9 @@
 <% } -%>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:site_name" content="Join Status" />
+    <meta property="og:site_name" content="Join Planq Network" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="Status — A secure messaging app, crypto wallet, and Web3 browser" />
+    <meta property="og:description" content="Castrum — A secure messaging app, crypto wallet, and Web3 browser" />
 <% if (locals.error) { -%>
     <meta property="og:title" content="<%= error.message %>" />
 <% } else { -%>
@@ -22,25 +22,25 @@
 <% if (locals.qrCardUrl) { -%>
     <meta property="og:image" content="<%= qrCardUrl %>" />
 <% } else { -%>
-    <meta property="og:image" content="https://join.status.im/img/logo.svg" />
+    <meta property="og:image" content="https://join.planq.network/img/logo.svg" />
 <% } -%>
 
     <!-- Formatting for Twitter link unfurling to fit QR code. -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@ethstatus" />
+    <meta name="twitter:site" content="@planqfoundation" />
     <meta property="twitter:image" content="<%= rootUrl %>/img/logo.jpg" />
-    <meta property="twitter:image:alt" content="Status logo" />
+    <meta property="twitter:image:alt" content="Castrum logo" />
 
 <% if (locals.path) { -%>
-    <meta property="status-im:target" content="<%= mainTarget %>" />
+    <meta property="castrum:target" content="<%= mainTarget %>" />
 
-    <meta property="al:ios:url" content="status-im:/<%= path %>" />
+    <meta property="al:ios:url" content="castrum:/<%= path %>" />
     <meta property="al:ios:app_store_id" content="1178893006" />
-    <meta property="al:ios:app_name" content="Status — Ethereum. Anywhere" />
+    <meta property="al:ios:app_name" content="Castrum — Ethereum + Cosmos. Anywhere" />
 
-    <meta property="al:android:url" content="status-im:/<%= path %>" />
-    <meta property="al:android:package" content="im.status.ethereum" />
-    <meta property="al:android:app_name" content="Status — Ethereum. Anywhere" />
+    <meta property="al:android:url" content="castrum:/<%= path %>" />
+    <meta property="al:android:package" content="network.planq.castrum" />
+    <meta property="al:android:app_name" content="Castrum — Ethereum + Cosmos. Anywhere" />
 <% } -%>
 
 <% if (locals.noindex) { -%>

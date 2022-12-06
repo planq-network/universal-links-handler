@@ -61,8 +61,8 @@ const handleSite = (req, res) => {
   let { url } = req.params
   url = url.replace(/https?:\/\//, '')
   genPage(req, res, {
-    title: `Browse to ${url} in Status`,
-    info: `Browse to ${url} in Status`,
+    title: `Browse to ${url} in Castrum`,
+    info: `Browse to ${url} in Castrum`,
     mainTarget: url,
     headerName: `<a href="https://${url}">${url}</a>`,
     path: `/b/${url}`
@@ -86,8 +86,8 @@ const handleChatKey = (req, res) => {
     return
   }
   genPage(req, res, {
-    title: `Join ${chatName} in Status`,
-    info: `Chat and transact with <span class="inline-block align-bottom w-32 truncate">${chatKey}</span> in Status.`,
+    title: `Join ${chatName} in Castrum`,
+    info: `Chat and transact with <span class="inline-block align-bottom w-32 truncate">${chatKey}</span> in Castrum.`,
     mainTarget: chatKey,
     headerName: chatName,
     path: req.originalUrl,
@@ -106,8 +106,8 @@ const handleEnsName = (req, res) => {
     return
   }
   genPage(req, res, {
-    title: `Join @${username} in Status`,
-    info: `Chat and transact with <span class="inline-block align-bottom w-32 truncate">@${username}</span> in Status.`,
+    title: `Join @${username} in Castrum`,
+    info: `Chat and transact with <span class="inline-block align-bottom w-32 truncate">@${username}</span> in Castrum.`,
     mainTarget: username,
     headerName: `@${utils.showSpecialChars(username)}`,
     path: req.originalUrl,
@@ -119,8 +119,8 @@ const handleEnsName = (req, res) => {
 const handlePublicChannel = (req, res) => {
   const chatName = req.params[0]
   genPage(req, res, {
-    title: `Join #${chatName} in Status`,
-    info: `Join public channel <span class="inline-block align-bottom w-32 truncate">#${chatName}</span> in Status.`,
+    title: `Join #${chatName} in Castrum`,
+    info: `Join public channel <span class="inline-block align-bottom w-32 truncate">#${chatName}</span> in Castrum.`,
     mainTarget: chatName, 
     headerName: `#${chatName}`,
     path: req.originalUrl,
@@ -147,7 +147,7 @@ const handleGroupChat = (req, res) => {
   /* Ugly fix for broken #mestresdobitcoin group chat.
    * See: https://github.com/status-im/status-react/issues/12025 */
   if (req.query['a1'] == '' && req.query['a2'] == undefined) {
-    res.redirect(302, 'https://status.im/get/')
+    res.redirect(302, 'https://planq.network/ecosystem/')
     return
   }
   try {
@@ -158,8 +158,8 @@ const handleGroupChat = (req, res) => {
   }
   let groupName = req.query.a1
   genPage(req, res, {
-    title: `Join "${groupName}" group chat in Status`,
-    info: `Join group chat <span class="inline-block align-bottom w-32 truncate">${groupName}</span> in Status.`,
+    title: `Join "${groupName}" group chat in Castrum`,
+    info: `Join group chat <span class="inline-block align-bottom w-32 truncate">${groupName}</span> in Castrum.`,
     whitespace: true, /* Allow whitespace in group names */
     mainTarget: groupName, 
     headerName: groupName,

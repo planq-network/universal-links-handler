@@ -1,6 +1,6 @@
 # Universal links handler
 
-App to handle universal links served at http://join.status.im
+App to handle universal links served at http://join.planq.network
 
 ## Getting Started
 
@@ -43,9 +43,3 @@ It will build the image and start the container listening on port `8080`
 ```bash
 yarn run tests
 ```
-
-CI: https://ci.status.im/job/website/job/join.status.im/
-
-## Deployment
-
-The code is automatically deployed when pushed to master

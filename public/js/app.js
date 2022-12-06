@@ -40,20 +40,15 @@ const _getMetaProp = (prop) => $(`meta[property="${prop}"]`).attr("content")
 /* helper to detect Android/iOS user agent */
 const _userAgentHas = (str) => navigator.userAgent.toLowerCase().indexOf(str) > -1
 
-/* redirect to Referral Service for referral bonus */
-const getReferralUrl = (params) => {
-  return `https://get.status.im/${params.invite}`
-}
-
 /* redirect to Play Store based on URL */
 const getPlayStoreUrl = (params) => {
   /* action for app to take after installation */
-  let args = { out: _getMetaProp('status-im:target') }
+  let args = { out: _getMetaProp('castrum:target') }
   return _buildPlayStoreUrl(_formatArgs(args))
 }
 
 const getAppStoreUrl = () => (
-  'https://apps.apple.com/us/app/status-private-communication/id1178893006'
+  'https://apps.apple.com/us/app/castrum-safe-secure/id6444807684'
 )
 
 const redirectToStore = () => {
@@ -62,15 +57,15 @@ const redirectToStore = () => {
 
   let params = _getParams(window.location.href)
   var url
-  /* if invite is set redirect tor referral service */
+  /* we are not supporting referral, redirect to google play store */
   if (params.invite) {
-    url = getReferralUrl(params)
+    url = getPlayStoreUrl(params)
   } else if (_userAgentHas('android')) {
     url = getPlayStoreUrl(params)
   } else if (_userAgentHas('iphone')) {
     url = getAppStoreUrl()
   } else { /* there's no desktop status app */
-    url = 'https://status.im/'
+    url = 'https://planq.network/'
   }
   console.log(`Redirecting to: ${url}`)
   window.location.replace(url);

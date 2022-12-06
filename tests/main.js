@@ -7,7 +7,7 @@ import links from '../resources/links.json'
 import assetLinks from '../resources/assetlinks.json'
 import appleSiteAssociation from '../resources/apple-app-site-association.json'
 
-const host = 'join.status.im'
+const host = 'join.planq.network'
 const proto = 'https'
 const url = `${proto}://${host}`
 const srv = request(app)
