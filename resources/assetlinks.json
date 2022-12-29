@@ -1,5 +1,14 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target" : { "namespace": "android_app", "package_name": "im.status.ethereum",
-               "sha256_cert_fingerprints": ["29:58:6A:6B:A0:CA:FA:A5:38:AA:CE:EA:DF:60:55:1C:EC:22:E9:65:68:40:35:D4:75:B7:9A:0A:8B:13:E2:9F"] }
-}]
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "network.planq.castrum",
+      "sha256_cert_fingerprints": [
+        "B0:BE:B4:75:29:1C:2A:E5:A6:AE:AA:DE:83:5D:7D:5C:6C:E3:D0:F0:ED:20:23:6F:EC:A7:56:05:EA:E1:D5:FC"
+      ]
+    }
+  }
+]
